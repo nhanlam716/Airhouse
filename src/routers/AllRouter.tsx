@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import Airhouse from "../layouts/app/Airhouse";
 
-const MainContent = React.lazy(() => import("../layouts/app/MainContent"));
 const Building = React.lazy(() => import("../pages/admin/building"));
 const RoomManagement = React.lazy(
   () => import("../pages/admin/roomManagement")
@@ -14,10 +14,10 @@ const AllRouter = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<MainContent />}>
+        <Route path="/" element={<Airhouse />}>
           <Route path="/building" element={<Building />} />
           <Route path="/roomManagement" element={<RoomManagement />} />
-          <Route path="/roomList" element={<RoomList />} />
+          <Route index path="/roomList" element={<RoomList />} />
           <Route path="/sale" element={<Sale />} />
           <Route path="/login" element={<Login />} />
         </Route>
