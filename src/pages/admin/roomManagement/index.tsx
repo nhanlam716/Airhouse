@@ -4,6 +4,7 @@ import FormInput from "../../../components/formInput/FormInput";
 import Select from "../../../components/selectForm/Select";
 import { Button } from "flowbite-react";
 import { ROOMSTABLE } from "../../../constants";
+import { PRICES, ROOMTYPE } from "../../../constants/select";
 
 const RoomManagement = () => {
   return (
@@ -15,9 +16,23 @@ const RoomManagement = () => {
             <FormInput placeholder="Tìm mã DA" />
             <FormInput placeholder="Mã phòng" />
             <FormInput placeholder="Đường" />
-            <Select title="Khoảng giá" />
-            <Select title="Loại phòng" />
-            <Select title="Còn" />
+            <Select title="Khoảng giá">
+              {PRICES.map((item) => (
+                <option key={item.id} value={item.price}>
+                  {item.price}
+                </option>
+              ))}
+            </Select>
+            <Select title="Loại phòng">
+              {ROOMTYPE.map((item, index) => (
+                <option key={index} value={item}>
+                  {item}
+                </option>
+              ))}
+            </Select>
+            <Select title="Còn">
+              <option value="Lock">Lock</option>
+            </Select>
             <Select title="Người cập nhật" />
             <Button color="dark">Xóa bộ lọc</Button>
           </div>
@@ -100,24 +115,32 @@ const RoomManagement = () => {
                       <div className="uppercase text-center ">DA1234</div>
                     </td>
                     <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
+                      <div className="uppercase text-center ">101</div>
+                    </td>
+                    <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
+                      <div className="uppercase text-center ">Studio</div>
+                    </td>
+                    <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
+                      <div className="uppercase text-center ">7500000</div>
+                    </td>
+                    <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
                       <div className="uppercase text-center ">
-                        65 Nguyễn Tư Giản
+                        233D Phan Văn Trị, Phường 11, Quận Bình Thạnh
                       </div>
                     </td>
                     <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
-                      <div className="uppercase text-center ">Phường 12</div>
+                      <div className="uppercase text-center ">
+                        + 0395845912 Tin Vu + 0393913213 Hữu Phước
+                      </div>
                     </td>
                     <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
-                      <div className="uppercase text-center ">Quận Gò Vấp</div>
+                      <div className="uppercase text-center ">Trống sẵn</div>
                     </td>
                     <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
-                      <div className="uppercase text-center ">0</div>
+                      <div className="uppercase text-center ">còn</div>
                     </td>
                     <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
-                      <div className="uppercase text-center ">0</div>
-                    </td>
-                    <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
-                      <div className="uppercase text-center ">Zalo</div>
+                      <div className="text-center">14:55 12/10/2024</div>
                     </td>
                     <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
                       <div className="uppercase text-center ">ah71_huentk</div>

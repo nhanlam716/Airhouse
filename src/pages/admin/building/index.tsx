@@ -4,6 +4,7 @@ import FormInput from "../../../components/formInput/FormInput";
 import Select from "../../../components/selectForm/Select";
 import { Button } from "flowbite-react";
 import { BUILDINGTABLE } from "../../../constants";
+import FormSelect from "../../../components/selectForm/FormSelect";
 
 const Building = () => {
   return (
@@ -13,12 +14,14 @@ const Building = () => {
         <div className="flex flex-col px-5 py-4 gap-[12px]">
           <div className="items-center gap-[12px] hidden lg:flex flex-wrap">
             <FormInput placeholder="Tìm mã DA" />
-            <Select title="Khu vực" />
-            <Select title="Phường" />
+            <div className="w-[200px]">
+              <Select title="Khu vực" />
+            </div>
+            <div className="w-[200px]">
+              <Select title="Phường" />
+            </div>
             <FormInput placeholder="Đường" />
-            <Select title="Khoảng giá" />
-            <Select title="Loại phòng" />
-            <Select title="Đặc Điểm" />
+            <FormSelect />
             <Button color="gray">Phòng yêu thích</Button>
             <Button color="dark">Xóa bộ lọc</Button>
           </div>
@@ -93,36 +96,36 @@ const Building = () => {
                 <tbody className="[&_tr:last-child]:border-0">
                   <tr className="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
                     <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
-                      <div className="text-center">16:00 17/07/2024</div>
+                      <div className="text-left">16:00 17/07/2024</div>
                     </td>
                     <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
-                      <div className="text-center">14:55 12/10/2024</div>
+                      <div className="text-left">14:55 12/10/2024</div>
                     </td>
                     <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
-                      <div className="uppercase text-center ">DA1234</div>
+                      <div className="uppercase text-left ">DA1234</div>
                     </td>
                     <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
-                      <div className="uppercase text-center ">
+                      <div className="uppercase text-left ">
                         65 Nguyễn Tư Giản
                       </div>
                     </td>
                     <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
-                      <div className="uppercase text-center ">Phường 12</div>
+                      <div className="uppercase text-left ">Phường 12</div>
                     </td>
                     <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
-                      <div className="uppercase text-center ">Quận Gò Vấp</div>
+                      <div className="uppercase text-left ">Quận Gò Vấp</div>
                     </td>
                     <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
-                      <div className="uppercase text-center ">0</div>
+                      <div className="uppercase text-left ">0</div>
                     </td>
                     <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
-                      <div className="uppercase text-center ">0</div>
+                      <div className="uppercase text-left ">0</div>
                     </td>
                     <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
-                      <div className="uppercase text-center ">Zalo</div>
+                      <div className="uppercase text-left ">Zalo</div>
                     </td>
                     <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
-                      <div className="uppercase text-center ">ah71_huentk</div>
+                      <div className="uppercase text-left ">ah71_huentk</div>
                     </td>
                     <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
                       <Button color="light">Xem chi tiết</Button>

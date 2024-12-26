@@ -1,13 +1,15 @@
 import React from "react";
 import cardSignIn from "../../assets/image/sign-in-card.webp";
 import Register from "../../pages/register/Register";
+import { Outlet } from "react-router-dom";
 
 const Account = () => {
   return (
     <div>
       <div className="flex h-screen">
         <div className="w-full flex-[55%]">
-          <Register />
+          {/* <Register /> */}
+          <Outlet />
         </div>
         <div className="w-full flex-[45%] flex justify-center items-center bg-[#f5f2f2] relative">
           <div className="bg-[url('./assets/image/sign-in-bg.webp')] bg-contain absolute w-[300px] h-[300px] top-0 left-0 "></div>

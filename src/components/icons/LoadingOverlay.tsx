@@ -8,4 +8,4 @@ const LoadingOverlay = () => {
   );
 };
 
-export { LoadingOverlay };
+export default LoadingOverlay;

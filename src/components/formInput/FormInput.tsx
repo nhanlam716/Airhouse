@@ -8,6 +8,10 @@ const FormInput = ({
   type,
   width,
   height,
+  value,
+  name,
+  onChange,
+  onBlur,
 }: ISignIn) => {
   return (
     <>
@@ -23,6 +27,10 @@ const FormInput = ({
             type={type}
             id={id}
             placeholder={placeholder}
+            name={name}
+            value={value}
+            onChange={onChange}
+            onBlur={onBlur}
             style={{ width, height }}
             className="flex h-10 rounded-md border border-[#D3D5DA] bg-[#ddd8d8] px-[16px] py-[12px] text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D3D5DA] focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 min-w-[150px]"
           />

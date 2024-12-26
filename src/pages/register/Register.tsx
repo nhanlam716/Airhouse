@@ -5,7 +5,6 @@ const Register = () => {
   return (
     <>
       <SignIn title="Đăng nhập" />
-      {/* <ForgotPassword title="Quên mật khẩu" /> */}
     </>
   );
 };

@@ -22,7 +22,11 @@ const ForgotPassword = ({ title }: ISignIn) => {
                   type={"text"}
                   id={"email"}
                   placeholder={"airhouse@gmail.com"}
+                  width="100%"
                 />
+                <p className="text-[14px] text-[#0B0A0F] w-full text-left">
+                  <a href={"./register"}>Quay lại Đăng nhập</a>
+                </p>
                 <Button button="Lấy lại mật khẩu" />
               </form>
             </div>

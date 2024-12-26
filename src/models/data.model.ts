@@ -7,6 +7,10 @@ export interface ISignIn {
   button?: string;
   width?: string;
   height?: string;
+  value?: string;
+  name?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
 }
 
 export interface INavbar {
